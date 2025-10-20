@@ -12,7 +12,7 @@ export const Section = ({ id, title, children, className }: SectionProps) => {
   return (
     <section id={id} className={cn("content-section", className)}>
       {title && (
-        <h2 className="text-2xl sm:text-3xl font-bold mb-6 pb-3 border-b-2 border-secondary">
+        <h2 className="section-title text-2xl sm:text-3xl font-bold mb-6 pb-3 border-b-2 border-primary">
           {title}
         </h2>
       )}

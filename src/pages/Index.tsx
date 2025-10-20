@@ -32,11 +32,11 @@ const Index = () => {
                 <img
                   src={profileAcademic}
                   alt="Professor Muhammad Gidado Mahmoud Fari in traditional attire"
-                  className="w-64 h-64 sm:w-80 sm:h-80 mx-auto rounded-full border-4 border-card shadow-lg object-cover mb-6"
+                  className="profile-image w-64 h-64 sm:w-80 sm:h-80 mx-auto rounded-full border-4 border-primary shadow-lg object-cover mb-6"
                   loading="lazy"
                   decoding="async"
                 />
-                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3">
+                <h1 className="text-3xl sm:text-4xl lg:text-5xl font-bold mb-3 animate-fade-in">
                   Professor Muhammad Gidado Mahmud Fari
                 </h1>
                 <p className="text-lg sm:text-xl text-secondary font-semibold mb-6 uppercase tracking-wide">
@@ -182,7 +182,7 @@ const Index = () => {
                 <img
                   src={profileSecurity}
                   alt="Professor Muhammad Gidado Mahmoud Fari in NSCDC uniform"
-                  className="w-64 h-64 sm:w-80 sm:h-80 mx-auto rounded-full border-4 border-card shadow-lg object-cover"
+                  className="profile-image w-64 h-64 sm:w-80 sm:h-80 mx-auto rounded-full border-4 border-primary shadow-lg object-cover"
                   loading="lazy"
                   decoding="async"
                 />

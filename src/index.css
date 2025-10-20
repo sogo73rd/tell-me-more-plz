@@ -94,7 +94,7 @@ All colors MUST be HSL.
 
 @layer base {
   * {
-    @apply border-border;
+    @apply border-border transition-colors duration-300;
   }
 
   body {
@@ -107,12 +107,89 @@ All colors MUST be HSL.
   }
 }
 
+/* Professional Animations */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
 @layer utilities {
   .section-container {
-    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8;
+    @apply max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-16;
   }
   
   .content-section {
-    @apply mb-12 p-6 sm:p-8 bg-card rounded-lg shadow-[var(--shadow-card)];
+    @apply mb-12 p-6 sm:p-8 bg-card rounded-lg shadow-[var(--shadow-card)] transition-all duration-500;
+    animation: fadeInUp 0.8s ease-out forwards;
+    opacity: 0;
+  }
+  
+  .content-section:nth-child(even) {
+    animation-delay: 0.1s;
+  }
+  
+  .content-section:nth-child(odd) {
+    animation-delay: 0.15s;
+  }
+  
+  .content-section:hover {
+    @apply shadow-xl -translate-y-1;
+  }
+  
+  .profile-image {
+    @apply transition-all duration-500;
+  }
+  
+  .profile-image:hover {
+    @apply scale-105 shadow-2xl;
+  }
+  
+  .section-title {
+    @apply relative inline-block;
+  }
+  
+  .section-title::after {
+    content: '';
+    @apply absolute bottom-0 left-0 w-0 h-1 bg-secondary transition-all duration-500;
+  }
+  
+  .content-section:hover .section-title::after {
+    @apply w-full;
+  }
+  
+  .list-item {
+    @apply transition-all duration-300;
+  }
+  
+  .list-item:hover {
+    @apply translate-x-2 text-secondary;
   }
 }
